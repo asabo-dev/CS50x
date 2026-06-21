@@ -1,0 +1,18 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    string answer = get_string("What's your name? ");
+    printf("hello, %s\n", answer);
+}
+
+/*
+Terminal Commands
+$ make input -- prompts compiler to translate source code to machine code
+$ ./input -- executes the source code.
+What's your name? Efiom
+hello, Efiom
+$
+
+*/
