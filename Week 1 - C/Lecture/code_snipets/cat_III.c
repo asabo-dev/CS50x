@@ -1,0 +1,31 @@
+// Using the 'do-while' condition for a loop.
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+    do
+    {
+        n = get_int("What's n? ");
+    }
+    while (n < 0);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
+}
+
+
+/*
+Terminal Output
+$ make cat
+$ ./cat
+What's n? -3
+What's n? 3
+meow
+meow
+meow
+$ 
+*/
