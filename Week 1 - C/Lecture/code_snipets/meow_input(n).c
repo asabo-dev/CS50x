@@ -14,7 +14,7 @@ int main(void)
 void meow(int n)
 // Define the meow function meow(n).
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("meow\n");
     }
