@@ -1,5 +1,4 @@
-// Using printf() to debug why 4 bricks instead of 3,
-is being printed as output.
+// Using printf() to debug why 4 bricks instead of 3, is being printed as output.
 #include <stdio.h>
 
 int main(void)
