@@ -1,41 +1,23 @@
-// Check 'type' in order to get correct output
+// Indexing variables (better design)
 #include <stdio.h>
 
 int main(void)
 {
-    int score_1 = 72;
-    int score_2 = 73;
-    int score_3 = 33;
+    // Initialize variable 'scores'
+    int scores[3];
+    scores[0] = 72;
+    scores[1] = 73;
+    scores[2] = 33;
 
-    printf("%f\n", (score_1 + score_2 + score_3)/(float) 3);
+    printf("%f\n", (scores[0] + scores[1] + scores[2])/(float) 3);
 }
 
 /*
+- *** This is a better design because the memory provides a big chunk to store the variables, 
+- instead of storing the variables in 3 seperate chunks of memory.***
 Terminal Output
-$ pwd
-/workspaces/89647569
-$ code scores.c
-$ make scores
-$ ./scores
-59 
-- ***The decimal points are truncated because int type was used instead of float ***
-$ 
-$ make scores
-scores.c:9:20: error: format specifies type 'double' but the argument has type 'int' [-Werror,-Wformat]
-    9 |     printf("%f\n", (score_1 + score_2 + score_3)/3);
-      |             ~~     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |             %d
-1 error generated.
-make: *** [<builtin>: scores] Error 1
-- *** When "%f" is passed in printf(), it throws an error ***
-$ 
-$ make scores
-$ ./scores
-59.333333
-- *** One solution is to convert the divisor into a float i.e. 3.0 ***
 $ make scores
 $ ./scores
 59.333332
-- *** Another solution is type casting i.e (float) 3 ***
 $ 
 */
