@@ -1,5 +1,7 @@
 // Change the characters of a string to uppercase
+// Use <ctype.h> library
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -10,10 +12,9 @@ int main(void)
     for (int i = 0, n = strlen(s); i < n; i++ )
     {
         // If s[i] is lowercase
-        if (s[i] >= 'a' && s[i] <= 'z')
+        if (islower(s[i]))
         {
-            // Difference between 'a' and 'A' in ASCII is 32
-            printf("%c", s[i] - 32);
+            printf("%c", toupper(s[i]));
         }
 
         // Else if not lowercase
@@ -29,10 +30,7 @@ int main(void)
 Terminal Output
 $ make uppercase
 $ ./uppercase
-Before:  okon
-After:   OKON
-$ ./uppercase
-Before:  tia
-After:   TIA
-$ 
+Before:  ufok
+After:   UFOK
+$
 */
