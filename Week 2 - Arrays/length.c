@@ -1,18 +1,13 @@
 // Determine the length(n) of a string
+// Use a library function strlen()
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
     string name = get_string("What's your name? ");
-
-    // n represents length of characters of the string
-    int n = 0;
-    // While the last value of n is not NUL('\0')
-    while (name[n] != '\0')
-    {
-        n++;
-    }
+    int n = strlen(name);
     printf("%i\n", n);
 }
 
@@ -20,9 +15,10 @@ int main(void)
 Terminal Output
 $ make length
 $ ./length
-What's your name? Ufokobong
-9
+What's your name? Lazarus
+7
 $ ./length
-What's your name? efiom
-5
+What's your name? Zion
+4
+$ 
 */
