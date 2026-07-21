@@ -1,5 +1,6 @@
 // Change the characters of a string to uppercase
 // Use <ctype.h> library
+// Simplify code to print any character that is not uppercase
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
@@ -11,17 +12,7 @@ int main(void)
     printf("After:   ");
     for (int i = 0, n = strlen(s); i < n; i++ )
     {
-        // If s[i] is lowercase
-        if (islower(s[i]))
-        {
-            printf("%c", toupper(s[i]));
-        }
-
-        // Else if not lowercase
-        else
-        {
-            printf("%c", s[i]);
-        }
+        printf("%c", toupper(s[i]));
     }
     printf("\n");
 }
@@ -30,7 +21,10 @@ int main(void)
 Terminal Output
 $ make uppercase
 $ ./uppercase
-Before:  ufok
-After:   UFOK
+Before:  mbOk
+After:   MBOK
+$ ./uppercase
+Before:  udoM
+After:   UDOM
 $
 */
