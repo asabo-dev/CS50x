@@ -1,18 +1,22 @@
 // Print a simple greeting
+// Change prototype for main()
+// Add command line arguments
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void)
+int main(int argc, string argv[])
 {
-    string s = get_string("what is your name? ");
-    printf("Hello, %s\n", s);
+    printf("Hello, %s\n", argv[1]);
 }
 
 /*
 Terminal Output
 $ make greeting
-$ ./greeting
-what is your name? Efiom
+$ ./greeting Shadow
+Hello, Shadow
+$ ./greeting Efiom
 Hello, Efiom
-$ 
+$ ./greeting
+Hello, (null)
+$
 */
