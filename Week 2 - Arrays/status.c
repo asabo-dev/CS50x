@@ -1,5 +1,4 @@
-// Investigate the actual value of 'int' in 'int main(void)'
-// Returned value of 0 means success, while any other integer means some form of failure
+// Use 'echo $?' to check the return value or error message 
 #include <cs50.h>
 #include <stdio.h>
 
@@ -18,9 +17,23 @@ int main(int argc, string argv[])
 
 /*
 Terminal Output
-$ make status
-$ ./status Efiom
-hello, Efiom
+$ make greeting
+$ ./greeting Shadow
+Hello, Shadow
+$ ./greeting Efiom
+Hello, Efiom
+$ ./greeting
+Hello, (null)
 $
-
-*/
+- *** 'echo $?' can be used to see the return value ***
+$ echo $?
+0
+$
+*
+- *** run 'echo $?' when there's an error message to see the return value ***
+$ ./status
+Missing command-line argument
+$ echo $?
+1
+$
+/
