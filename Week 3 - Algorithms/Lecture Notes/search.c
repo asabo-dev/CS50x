@@ -1,4 +1,5 @@
-// A program that searches for a number (50) in an array of numbers
+// A program that searches for a number in an array of numbers
+// This demonstrates an implementation of a linear search
 #include <stdio.h>
 #include <cs50.h>
 
