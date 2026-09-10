@@ -1,5 +1,5 @@
 // Implement linear search for a phonebook
-// Improve previous code by creating a data structure "person"
+// Improve phonebook.c by creating a data structure "person"
 // This process of bundling data together is called 'encapsulation'
 #include <cs50.h>
 #include <stdio.h>

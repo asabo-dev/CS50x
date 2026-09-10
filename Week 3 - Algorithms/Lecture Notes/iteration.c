@@ -1,0 +1,41 @@
+// Draw a Mario pyramid using iterations
+// Iteration means using loops to solve a problem
+#include <cs50.h>
+#include <stdio.h>
+
+void draw(int n);
+
+int main(void)
+{
+    int height = get_int("Height: ");
+
+    draw(height);
+}
+
+void draw(int n)
+{
+    // For each row of pyramid
+    for (int i = 0; i < n; i++)
+    {
+        // For each column of pyramid
+        for (int j = 0; j < i + 1; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+
+
+/*
+Terminal Output
+$ make iteration
+$ ./iteration
+Height: 5
+#
+##
+###
+####
+#####
+$ 
+*/
