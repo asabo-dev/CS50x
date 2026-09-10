@@ -1,6 +1,6 @@
 // Draw a Mario pyramid using recursion
 // Recursion means calling a function on itself
-// This is a cleaner code compared to iteration.c
+// Lean version of code
 #include <cs50.h>
 #include <stdio.h>
 
@@ -15,19 +15,11 @@ int main(void)
 
 void draw(int n)
 {
-    // Base case
     if (n <= 0)
-    {
         return;
-    }
-    // Print pyramid of height n - 1
     draw(n - 1);
-
-    // Print one more row
     for (int i = 0; i < n; i++)
-    {
         printf("#");
-    }
     printf("\n");
 }
 
@@ -35,10 +27,14 @@ void draw(int n)
 Terminal Output
 $ make recursion
 $ ./recursion
-Height: 4
+Height: 8
 #
 ##
 ###
 ####
-
+#####
+######
+#######
+########
+$ 
 */
