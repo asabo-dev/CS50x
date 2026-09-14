@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Bold;
+\f3\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19440\viewh12980\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs50 \cf0 Sort1 - runtime is 0.14s when a small, random number is being sorted, 0.216s for a medium number and 6.85s for a large number.\
+\
+When the numbers are sorted, runtime is 0.028s for small number, 0.045s for medium number and 0.677s for a large number.\
+\
+\
+When a large number is already sorted, sort2 runtime comes first with 0.499s, followed by sort1 0.677s and then sort3 2.414s. Therefore sort2 handles big sorted numbers most effectively.\
+\
+When a large number is random, sort2 also handles data more quickly followed by sort3 and then sort1. Therefore sort2 is good for large data set. Sort2 is probably a merge sort.\
+\
+When data is already sorted, sort1 runs considerably faster. Sort1 is probably a bubble sort.\
+\
+In sort3, it can be seen that the runtime takes roughly the same amount of time whether the number array is random, reversed or sorted. Therefore sort3 is probably a selection sort.\
+\
+\
+sort1 uses: Bubble Sort\
+\
+How do you know?: Sort1 performs much faster when the input is already sorted. For example, with 50,000 values, it takes 0.677s for sorted data compared with 6.850s for random data and 4.989s for reversed data. This suggests Bubble Sort because Bubble Sort can finish much faster when the data is already sorted.\
+\
+sort2 uses: Selection Sort\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs56 \cf0 \expnd0\expndtw0\kerning0
+Sort2 has similar runtimes for random, reversed, and sorted data. For 50,000 values, the runtimes are 
+\f2\b 0.499s, 0.552s, and 0.499s
+\f1\b0  respectively. Its runtime also increases significantly as the amount of data increases, which is consistent with 
+\f2\b O(n\'b2)
+\f1\b0 . This suggests Selection Sort.
+\f0\fs82 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs50 \cf0 \
+sort3 uses: Merge Sort\
+\
+How do you know?: Sort3 also has relatively similar runtimes regardless of the order of the input. With 50,000 values, it takes 2.327s for random data, 2.425s for reversed data, and 2.414s for sorted data. Its performance also scales better than sort1 as the input gets larger. This suggests Merge Sort.\
+\
+\
+\
+\
+\
+\
+
+\f3\i Sort1 uses: Bubble Sort\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 How do you know?: On final comparison between sort1 and sort3, it can be inferred that sort1 performs better when the dataset is already sorted. When a dataset of 5,000 sorted values is being ran, sort1 runtime is 0.072 seconds while that if sort3 is 0.045 seconds. Given that sort3 which is a Selection Sort performs better that sort1, it can be inferred that sort1 is a Bubble sort.
+\f3\i \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Sort2 uses: Merge Sort\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 How do you know?: 
+\f3\i Sort2 performs better with large dataset. The runtime for random 50,000 values was 5.813 seconds for sort1, 2.384 seconds for sort3, while sort2 was the fastest at just 0.374 seconds. This suggests Merge Sort.\
+\
+Sort3 uses: Selection sort\
+\
+
+\f0\i0 How do you know?:  Sort3 runtime is almost the same for a small dataset whether the input is sorted, reversed, or random. The runtime for was 0.043 seconds, 0.045 seconds, and 0.050 seconds for sorted, reversed and random dataset of 5,000 values. Comparatively, sort1 runtimes varies remarkably depending on whether the input data was sorted or random.
+\f3\i \
+ \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\f0\i0 \
+}

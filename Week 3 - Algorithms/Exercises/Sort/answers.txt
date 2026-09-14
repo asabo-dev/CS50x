@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: On comparing the runtimes, it can be inferred that sort1 performs better when the dataset is already sorted. For 50,000 values, sort1 takes 0.599 seconds for sorted data, compared with 5.813 seconds for random data. This large difference suggests that sort1 is Bubble Sort, because Bubble Sort can perform much faster when the input is already sorted.
+
+sort2 uses: Merge Sort
+
+How do you know?: sort2 performs better with a large dataset. For 50,000 random values, sort1 takes 5.813 seconds, sort3 takes 2.384 seconds, while sort2 is the fastest at just 0.374 seconds. sort2 also has a much smaller increase in runtime as the dataset becomes larger. This suggests that sort2 is Merge Sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: sort3 has almost the same runtime for a small dataset whether the input is sorted, reversed, or random. For 5,000 values, the runtimes are 0.043 seconds for sorted data, 0.045 seconds for reversed data, and 0.050 seconds for random data. This shows that the order of the input has little effect on sort3's performance. This suggests that sort3 is Selection Sort, which has a time complexity of O(n²).
