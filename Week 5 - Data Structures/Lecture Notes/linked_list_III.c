@@ -1,4 +1,5 @@
 // Implements a sorted linked list of numbers
+// Demonstrates the various conditions for allocating pointers (->)
 
 #include <cs50.h>
 #include <stdio.h>
