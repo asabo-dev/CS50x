@@ -1,4 +1,5 @@
 # Prints a right-aligned half pyramid
+# CS50 mario.py Problem Set 6 solution.
 
 from cs50 import get_int
 
